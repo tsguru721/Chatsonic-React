@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lawsearch-test",
+  "private_key_id": "c32c8082e93e9b283cdc91f41b891308b44f5ee4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDZH9Qe1BkvPeu\nd4xw/PDEgnzSI3oKNDvmkIhwk+uKu5JOpDtXcRO9PDyXE7S/s/xfzaBu/TBxxeMw\nnQPiajkRvvPhlU3ALxEbvIhQiwlvbcSLcBSA+p2ntJqGmbH1g1XCQQoAeESQZsXT\nog7V41voTViRoIsjQCRXiuLtnN1wv3yXztpxNB+Iz1SgJ2y81lUIDgOXB5holErk\nB2KaB5tKFPwmM6mDHir9FdcOVt68EaAdZ8lNtp/1/YDB+Q9E2dt9/rgkLl7rE2/V\nLJ82BqRyEXbOmkyIbtlhBjsitL1d8LdwwPAcGImXwHjkkkxzx0dQHfcygkzKHATF\ndwZ84/TdAgMBAAECggEABJA/rLAIC27Y/TOE39VCzXMALJkd8shZGYQ/qBsrLRUa\nR1JafU+wJGfPQQjnSgV9MtULaSDFtYX6BHrcCibIiN3tNdQRgyp/ZJSET/JnXV4X\nJ/5EWy8asfSr0K2vRrPg6oXB7B2Z1OuOIx9Nw0GEyICrGPZ5lN5BbVJIKYnT3ndu\n19Qpf+UvHWBYv5cUh6NgUb4lGvG6Hlq9fexCSyrdthipSClNhog9IoG9iSqzn2eb\nRH5aVcmxdA15F5ZMYm5c5qS0wrNUNMFQqyA54xo12icADEi+vklvVrP1ilBGpFG3\nBew2OWV6pBhlFCivFX9eXMCyuf/jQwZiDFPCjuEV6wKBgQDrRiSWnyHSmA6AsFdS\njDPkFzyWZSZpBmukFrsaPOdsr8xP/eoa9bFq/9gCzsla0aXlqqJre6T/Ncti0AJo\n8x0ly7K5lg2MIL7PkWZMnEdmXWxtORuBXT94kuSwYOmpd6anxgc04ykhj4Ptdhlt\n02ktqjU5Zh965htiuadzXDGpNwKBgQDUmvSf0ofT7Msg9DnU/t6WK3UFv2zQ/jb3\nFysnpJMRNXQVEJJKkatbbk+6y0MsCzwzVFXQxPuYHsOZqg1mgsic0q17OEc2ANm7\n5Q6h2JS1eOlu3bLBiNbSee46LjbFMUn984L67TJZEBRNynm2iirHI0C+BCUPmLpK\nykTcKzWMiwKBgQCls3AfeRIsLRXBwvCtXbtKQKdWUQUdYP08wxmhoBVp8eKW0AEq\nXbJH5srvJ06fHRqXR3c+9gU+DVgiTtfzrI3xyaYlmS4PbByXOhNvj32l9dRglKDv\nmooSVHqmUose5PtGHG2E7RxR268R9mRwej4QgFkeBPPU7e2JubHayKrdPwKBgE5s\nxpX6BC6xp5CFZpviVFtStn0jStGhJMdq3XlnJPTxIdvvW/dz2qEEhRajiijCEDfj\nATDcqO5JUt/pMb5BuhzXPjU44lPSZn8AFLCxAtIaQwmpcBoiDxRe8/i0OXHuJ5ws\n6oEDZFIkM0kqylECkJsarvQo9T7WmMmj6VjJ+5vXAoGBAJZn2NkFNuvNUNK/QF0r\nGoIqIVz/RKpen4KjylOEA1L1Pe7ZzZ/4hwBPhlUv04Nbsw/aoxRc0ykjbqHlzEX9\nQIGQE5ToQPYueiVybBKdxTTY9RVwaKlvVzFoW6bXl92EZVOAyRExvNsAUB5J6weu\n3WKRR5BoxNhlBGfNVCmJY0p3\n-----END PRIVATE KEY-----\n",
+  "client_email": "lawsearch@lawsearch-test.iam.gserviceaccount.com",
+  "client_id": "115228065006423522155",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lawsearch%40lawsearch-test.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

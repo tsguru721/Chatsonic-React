@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da9fbfa1.css",
+    "main.js": "/static/js/main.2d2b7ff3.js",
+    "static/media/aboutUsTopImg.png": "/static/media/aboutUsTopImg.54921b42828c74108314.png",
+    "static/media/feedImg3.png": "/static/media/feedImg3.437986d4b9a03629d041.png",
+    "static/media/feedImg1.png": "/static/media/feedImg1.5845d294b75610d947ab.png",
+    "static/media/howItWorks.png": "/static/media/howItWorks.10a50915c2fdd45a1bd6.png",
+    "static/media/article 1.png": "/static/media/article 1.48336ce8dde9d7f1edf2.png",
+    "static/media/aboutUsBackground.png": "/static/media/aboutUsBackground.789391ddade606f22f79.png",
+    "static/media/showcase.jpg": "/static/media/showcase.33c7a31be966664a6454.jpg",
+    "static/media/logo.png": "/static/media/logo.095b8fa97d04fafa8a3f.png",
+    "static/media/board.png": "/static/media/board.ef9c7afb9fcffca48138.png",
+    "static/media/whatsthecatch.png": "/static/media/whatsthecatch.6c047a1f79f57d10fb5c.png",
+    "static/media/full-logo.png": "/static/media/full-logo.5ec0d2799200988a387b.png",
+    "static/media/lastimage.png": "/static/media/lastimage.1ca643fb878b89d2c6d1.png",
+    "static/media/David Shea 1.png": "/static/media/David Shea 1.ad6d3d395f91e5db51ce.png",
+    "static/media/Section 13.png": "/static/media/Section 13.79f5d368518cad2b0e81.png",
+    "static/media/PatrickMcCabe_Headshot 1.png": "/static/media/PatrickMcCabe_Headshot 1.e6691393ffdb2d3f927d.png",
+    "static/media/feedIMg2.png": "/static/media/feedIMg2.b2da03034cbb6e2a960f.png",
+    "static/media/stripe.png": "/static/media/stripe.bb4a23ca562656bd0478.png",
+    "static/media/tools.png": "/static/media/tools.32de8c0a92c0cd141a3a.png",
+    "index.html": "/index.html",
+    "main.da9fbfa1.css.map": "/static/css/main.da9fbfa1.css.map",
+    "main.2d2b7ff3.js.map": "/static/js/main.2d2b7ff3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da9fbfa1.css",
+    "static/js/main.2d2b7ff3.js"
+  ]
+}
