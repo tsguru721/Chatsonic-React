@@ -1,6 +1,7 @@
 node_modules/
 config/production.json
 vertex.json
+openai.json
 client/build
 client/.eslintcache
 client/node_modules/

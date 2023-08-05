@@ -8,14 +8,18 @@ import {
   askToChatsonic,
   askToGoogleVertex,
   newChatBox,
-  exchangeCurrentItem
+  exchangeCurrentItem,
+  askToOpenai
 } from '../../actions/search';
+
+import data from '../../openai.json'
 const SearchResult = ({
   auth,
   gtoken,
   searchResult,
   askToChatsonic,
   askToGoogleVertex,
+  askToOpenai,
   searchState,
   searchQuery,
   searchQueries,
@@ -43,6 +47,11 @@ const SearchResult = ({
 
   const searchWithGoogleVertex = (e) => {
     askToGoogleVertex(formData, auth.user.email, gtoken, searchQueries);
+    setFormData({ ...formData, input_text: '' });
+  };
+  
+  const searchWithOpenai = (e) => {
+    askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries);
     setFormData({ ...formData, input_text: '' });
   };
   // const research = (e) => {
@@ -85,7 +94,7 @@ const SearchResult = ({
   const searchByEnter = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      askToGoogleVertex(formData, auth.user.email, gtoken, searchQueries);
+      askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries);
     }
   };
   const exchangeHistory = (key) => {
@@ -180,7 +189,7 @@ const SearchResult = ({
               </button> */}
 
                     <button
-                      onClick={searchWithGoogleVertex}
+                      onClick={searchWithOpenai}
                       className="btn btn-success"
                     >
                       Search
@@ -226,6 +235,7 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps, {
   askToChatsonic,
   askToGoogleVertex,
+  askToOpenai,
   newChatBox,
   exchangeCurrentItem
 })(SearchResult);

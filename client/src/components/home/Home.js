@@ -4,15 +4,17 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { askToChatsonic, askToGoogleVertex } from '../../actions/search';
+import { askToChatsonic, askToGoogleVertex, askToOpenai } from '../../actions/search';
 import howitworksAvatar from '../../img/howItworksManAvatar.png';
 import { subscribeFreetrial } from '../../actions/subscribe';
+import data from '../../openai.json'
 const Home = ({
   auth,
   gtoken,
   searchState,
   askToChatsonic,
   askToGoogleVertex,
+  askToOpenai,
   searchQueries,
   subscribeFreetrial
 }) => {
@@ -55,19 +57,26 @@ const Home = ({
         gotoSearchResult();
       });
   };
+  const searchWithOpenai = (e) => {
+    myPromise
+      .then(askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries))
+      .then(function () {
+        gotoSearchResult();
+      });
+  };
+  
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const searchByEnter = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      myPromise
-        .then(
-          askToGoogleVertex(formData, auth.user.email, gtoken, searchQueries)
-        )
-        .then(function () {
-          gotoSearchResult();
-        });
+      
+    myPromise
+    .then(askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries))
+    .then(function () {
+      gotoSearchResult();
+    });
     }
   };
   // const handleKeyDown = (event) => {
@@ -156,7 +165,7 @@ const Home = ({
                 </button> */}
 
                 <button
-                  onClick={searchWithGoogleVertex}
+                  onClick={searchWithOpenai}
                   className="btn btn-success"
                 >
                   Search
@@ -380,5 +389,6 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps, {
   askToChatsonic,
   askToGoogleVertex,
-  subscribeFreetrial
+  subscribeFreetrial,
+  askToOpenai
 })(Home);

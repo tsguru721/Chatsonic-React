@@ -274,3 +274,111 @@ export const askToGoogleVertex =
       dispatch(setAlert('Subscribe is finished.', 'danger'));
     }
   };
+
+export const askToOpenai =
+  (formData, email, openAiKey, searchQueries) => async (dispatch) => {
+    const res = await api.post('/subscribe/checkSubscribe', { email: email });
+
+    if (res.data.nonSubscribe === true) {
+      dispatch(
+        setAlert('Please subscribe free trial or premium subscribe.', 'success')
+      );
+    } else if (
+      res.data.nonSubscribe === false &&
+      (res.data.subscribe.subscribe === 0 || res.data.subscribe.subscribe === 1)
+    ) {
+      let subscribedData = new Date(res.data.subscribe.updatedAt);
+      let today = new Date();
+      let subtractMiliSecond = today - subscribedData;
+      let substractData = parseInt(subtractMiliSecond / 3600000 / 24);
+      if (substractData > 30) {
+        await api.post('/subscribe/unSubscribe', {
+          email: email
+        });
+        if (substractData) dispatch(setAlert('Subscription End', 'danger'));
+      }
+      const { input_text, promptList } = formData;
+      try {
+        let inputValue = input_text;
+        let promptsInSearchEvent = '';
+        let searchQueriyHistory = '';
+        let searchKeywardWithPrompts = '';
+        promptList.forEach((value) => {
+          promptsInSearchEvent += ' ' + value;
+        });
+        searchQueries.forEach((value) => {
+          searchQueriyHistory += ' ' + value;
+        });
+        // promptList.map((value, index) => {
+        //   promptsInSearchEvent += ' ' + value;
+        // });
+        console.log('search query', searchQueriyHistory);
+        searchKeywardWithPrompts =
+          // 'Write a succinct and factual answer for legal professionals with the goal of providing relevant five precedents and providing five reference to the source of the information' +
+          promptsInSearchEvent + searchQueriyHistory + ' ' + inputValue;
+        dispatch({
+          type: SEARCH_NOW,
+          payload: inputValue
+        });
+        axios
+          .post(
+            'https://api.openai.com/v1/chat/completions',
+            {
+              model: 'gpt-3.5-turbo',
+              messages: [
+                {
+                  role: 'system',
+                  content: searchKeywardWithPrompts
+                },
+                {
+                  role: 'user',
+                  content: 'Hello!'
+                }
+              ]
+            },
+            {
+              headers: {
+                accept: 'application/json',
+                'content-type': 'application/json',
+                Authorization: 'Bearer ' + openAiKey
+              }
+            }
+          )
+          .then(function (response) {
+            let result = response.data.choices[0].message.content;
+            // console.log('response', response.data.choices[0].message.content);
+            if (result) {
+              const paragraphs = result.split('\n'); // Split the text into paragraphs
+
+              let formattedText = '';
+              for (const p of paragraphs) {
+                let includesA = p.includes('<br>');
+                if (includesA)
+                  formattedText += `${p}`; // Add paragraph tags to each paragraph
+                else formattedText += `<p>${p}</p>`; // Add paragraph tags to each paragraph
+              }
+              dispatch({
+                type: SEARCH_SUCCESS,
+                payload: formattedText
+              });
+              dispatch({
+                type: SET_HISTORY
+                // payload: { vertexResult: response, query: inputValue }
+              });
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+
+        // End of axios
+      } catch (err) {
+        console.log(err);
+      }
+    } else if (
+      res.data.subscribe.subscribe === 2 &&
+      res.data.nonSubscribe === false
+    ) {
+      dispatch(setAlert('Subscribe is finished.', 'danger'));
+    }
+  };
