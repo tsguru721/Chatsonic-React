@@ -3,6 +3,7 @@ config/production.json
 vertex.json
 openai.json
 client/build
+client/build.zip
 client/src/openai.json
 client/.eslintcache
 client/node_modules/
