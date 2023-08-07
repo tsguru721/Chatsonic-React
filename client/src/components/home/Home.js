@@ -367,7 +367,7 @@ const Home = ({
       <div className="row">
         <div className="col-md-12 freetrialHomeBtnDiv">
           <button className="freetrialHomeBtn-7">
-            <p>7 Day Free Trial - Click Here to Sign Up</p>
+            <p>Start Your Free Trial Today</p>
             <i className="fa fa-check" />
           </button>
         </div>

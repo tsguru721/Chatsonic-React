@@ -199,6 +199,15 @@ const SearchResult = ({
                 </div>
               </div>
             </div>
+            <div className="row">
+              <div className="col-md-12">
+                <p className="follow-up-query-alarm">
+                  Feel free to ask me follow up questions if you’d like me to
+                  provide more details. If the result isn’t to your
+                  satisfaction, let me know and ask me again.{' '}
+                </p>
+              </div>
+            </div>
             <div className="row footer">
               <div className="col-md-12 privacy-footer">
                 <Link to="/privacy">

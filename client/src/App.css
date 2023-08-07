@@ -150,7 +150,7 @@
   }
 
   .freetrialHomeBtn-7 i {
-    font-size: 2em;
+    font-size: 1em;
   }
   .freeTrialBox {
     width: 500px;
@@ -1242,7 +1242,6 @@
   list-style-type: disc;
 }
 .freeTrialBox li {
-  font-weight: normal;
   float: left;
 }
 .freeTrialBox p {
@@ -1557,4 +1556,7 @@
 }
 .result-search-board {
   margin: 0;
+}
+.follow-up-query-alarm {
+  font-size: 12px;
 }

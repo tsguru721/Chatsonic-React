@@ -96,10 +96,10 @@ const Payment = ({ auth, subscribe, subscribeFreetrial }) => {
             <p className="status">$50 /Month</p>
             <p className="cancelTrial">Features</p>
             <ul>
-              <li>Cancel Anytime</li>
               <li>Complete access lawsearch.ai</li>
               <li>No hidden extra costs</li>
               <li>Unlimitted Users Per Firm</li>
+              <li>Cancel Anytime </li>
             </ul>
           </div>
         </div>
