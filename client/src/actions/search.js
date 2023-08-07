@@ -327,11 +327,11 @@ export const askToOpenai =
               model: 'gpt-3.5-turbo',
               messages: [
                 {
-                  role: 'system',
+                  role: 'user',
                   content: searchKeywardWithPrompts
                 },
                 {
-                  role: 'user',
+                  role: 'system',
                   content:
                     'Please provide the searcher with examples of legal cases that are similar to theirs or have been used as precedent for similar cases. Only provide examples of cases that are available on publicly available databases. Provide links to these cases where possible. Please present in bullet point format (a bullet point per case).'
                 }
