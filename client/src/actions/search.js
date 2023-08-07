@@ -332,7 +332,8 @@ export const askToOpenai =
                 },
                 {
                   role: 'user',
-                  content: 'Hello!'
+                  content:
+                    'Please provide the searcher with examples of legal cases that are similar to theirs or have been used as precedent for similar cases. Only provide examples of cases that are available on publicly available databases. Provide links to these cases where possible. Please present in bullet point format (a bullet point per case).'
                 }
               ]
             },

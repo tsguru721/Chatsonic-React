@@ -4,10 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { askToChatsonic, askToGoogleVertex, askToOpenai } from '../../actions/search';
+import {
+  askToChatsonic,
+  askToGoogleVertex,
+  askToOpenai
+} from '../../actions/search';
 import howitworksAvatar from '../../img/howItworksManAvatar.png';
 import { subscribeFreetrial } from '../../actions/subscribe';
-import data from '../../openai.json'
+import data from '../../openai.json';
 const Home = ({
   auth,
   gtoken,
@@ -59,24 +63,28 @@ const Home = ({
   };
   const searchWithOpenai = (e) => {
     myPromise
-      .then(askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries))
+      .then(
+        askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries)
+      )
       .then(function () {
         gotoSearchResult();
       });
   };
-  
+
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const searchByEnter = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      
-    myPromise
-    .then(askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries))
-    .then(function () {
-      gotoSearchResult();
-    });
+
+      myPromise
+        .then(
+          askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries)
+        )
+        .then(function () {
+          gotoSearchResult();
+        });
     }
   };
   // const handleKeyDown = (event) => {
@@ -140,6 +148,8 @@ const Home = ({
               onKeyDown={searchByEnter}
               style={inputstyle}
             ></textarea>
+
+            <i className="fas fa-user" />
             {/* <input
               type="text"
               className="form-control sesarch-input"
@@ -164,10 +174,7 @@ const Home = ({
                   Search To Chatsonic
                 </button> */}
 
-                <button
-                  onClick={searchWithOpenai}
-                  className="btn btn-success"
-                >
+                <button onClick={searchWithOpenai} className="btn btn-success">
                   Search
                 </button>
               </>
