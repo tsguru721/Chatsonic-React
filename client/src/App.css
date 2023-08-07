@@ -27,6 +27,80 @@
   margin: auto;
   text-align: center;
 }
+.freeTralBtn {
+  background-color: red;
+  color: black;
+  padding: 5px 10px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 60px;
+  border-color: transparent;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.paymentTitle {
+  font-weight: bold;
+}
+.freeTralBtnAboutUS {
+  width: 60%;
+  border: none;
+  padding: 10px;
+  background-color: #d9d9d9;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Sansita Swashed;
+}
+
+.howItWork-ai {
+  position: relative;
+  background: url('./img/howItWork/AI.png') no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+.howItWork-except {
+  position: relative;
+  background: url('./img/howItWork/Whatcaniexpect.png') no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+.howItWork-start {
+  position: relative;
+  background: url('./img/howItWork/getStart.png') no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+.howItWork-tools {
+  position: relative;
+  background: url('./img/howItWork/tools.png') no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+.howItWork-catch {
+  position: relative;
+  background: url('./img/howItWork/whatsthecatch.png') no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+.howItWork-last {
+  position: relative;
+  background: url('./img/howItWork/lastimage.png') no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+
 @media (min-width: 481px) {
   .article-dash {
     background: url('./img/aboutUsBackground.png') no-repeat;
@@ -106,6 +180,10 @@
 
   .search-dash {
     height: fit-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
   }
   .optimal-result-dash {
     display: flex;
@@ -170,7 +248,7 @@
     margin: auto;
     overflow: hidden;
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 150px;
     margin-bottom: 3rem;
   }
   .privacyContainer {
@@ -723,8 +801,16 @@
   }
 
   .header {
+    padding: 10px;
     padding-top: 5vh;
     margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+
+    z-index: 1000; /* ensure the header is always on top */
   }
   .header p {
     display: block;
@@ -744,9 +830,19 @@
     width: fit-content;
   }
   .search-input {
-    width: 100%;
+    width: 85%;
     float: left;
-    margin-top: 1vw;
+    height: 50px;
+    margin: 0 !important;
+  }
+  .home-search-btn {
+    margin-left: 10px;
+  }
+  .search-icon {
+    position: absolute;
+    left: 81%;
+    font-size: 20px;
+    top: 40%;
   }
   .search-btn {
     float: left;
@@ -879,79 +975,6 @@
     float: left;
   }
 }
-.freeTralBtn {
-  background-color: red;
-  color: black;
-  padding: 5px 10px;
-  font-size: 30px;
-  font-weight: bold;
-  border-radius: 60px;
-  border-color: transparent;
-  margin-bottom: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-.paymentTitle {
-  font-weight: bold;
-}
-.freeTralBtnAboutUS {
-  width: 60%;
-  border: none;
-  padding: 10px;
-  background-color: #d9d9d9;
-  font-size: 2em;
-  font-weight: bold;
-  font-family: Sansita Swashed;
-}
-
-.howItWork-ai {
-  position: relative;
-  background: url('./img/howItWork/AI.png') no-repeat;
-  background-size: contain;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-}
-.howItWork-except {
-  position: relative;
-  background: url('./img/howItWork/Whatcaniexpect.png') no-repeat;
-  background-size: contain;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-}
-.howItWork-start {
-  position: relative;
-  background: url('./img/howItWork/getStart.png') no-repeat;
-  background-size: contain;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-}
-.howItWork-tools {
-  position: relative;
-  background: url('./img/howItWork/tools.png') no-repeat;
-  background-size: contain;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-}
-.howItWork-catch {
-  position: relative;
-  background: url('./img/howItWork/whatsthecatch.png') no-repeat;
-  background-size: contain;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-}
-.howItWork-last {
-  position: relative;
-  background: url('./img/howItWork/lastimage.png') no-repeat;
-  background-size: contain;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-}
 /* Mobile responsive UI */
 @media (max-width: 480px) {
   .article-dash {
@@ -1028,9 +1051,6 @@
     width: 100%;
   }
 
-  .header {
-    padding: 10px;
-  }
   a {
     /* text-decoration: none; */
     color: black;
@@ -1528,4 +1548,13 @@
 .search-History-Item {
   width: 100%;
   background-color: transparent;
+}
+.search-bar-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.result-search-board {
+  margin: 0;
 }

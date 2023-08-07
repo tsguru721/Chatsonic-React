@@ -109,7 +109,7 @@ const Home = ({
     fontStyle: 'italic'
   };
   const inputstyle = {
-    margin: '0 0 10px 0'
+    margin: '0'
   };
   useEffect(() => {
     // fetchData();
@@ -138,7 +138,7 @@ const Home = ({
               <label className="form-label">Search Keyword:</label>
             </div> */}
 
-            <textarea
+            <input
               className="form-control  search-input"
               rows="5"
               name="input_text"
@@ -147,9 +147,9 @@ const Home = ({
               onChange={onChange}
               onKeyDown={searchByEnter}
               style={inputstyle}
-            ></textarea>
+            ></input>
 
-            <i className="fas fa-user" />
+            <i className="fas fa-search search-icon" />
             {/* <input
               type="text"
               className="form-control sesarch-input"
@@ -174,7 +174,10 @@ const Home = ({
                   Search To Chatsonic
                 </button> */}
 
-                <button onClick={searchWithOpenai} className="btn btn-success">
+                <button
+                  onClick={searchWithOpenai}
+                  className="btn btn-success home-search-btn"
+                >
                   Search
                 </button>
               </>
@@ -239,7 +242,7 @@ const Home = ({
       <div className="row">
         <div className="col-md-12 freetrialHomeBtnDiv">
           <button className="freetrialHomeBtn" onClick={subscribeFreePlan}>
-            Try for free
+            Start Your Free Trial
             <i className="fa fa-arrow-right tryfreeicon" />
           </button>
         </div>

@@ -12,7 +12,7 @@ import {
   askToOpenai
 } from '../../actions/search';
 
-import data from '../../openai.json'
+import data from '../../openai.json';
 const SearchResult = ({
   auth,
   gtoken,
@@ -49,7 +49,7 @@ const SearchResult = ({
     askToGoogleVertex(formData, auth.user.email, gtoken, searchQueries);
     setFormData({ ...formData, input_text: '' });
   };
-  
+
   const searchWithOpenai = (e) => {
     askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries);
     setFormData({ ...formData, input_text: '' });
@@ -137,7 +137,7 @@ const SearchResult = ({
           </div>
         </div>
         <div className="col-md-10">
-          <div className="container">
+          <div className="container result-search-board">
             {searchResults.map((index, key) => (
               <div key={key}>
                 <div className="row">
@@ -161,42 +161,42 @@ const SearchResult = ({
 
             <div className="row">
               <div className="col-md-12">
-                <textarea
-                  className="form-control  sesarch-input"
-                  rows="5"
-                  name="input_text"
-                  placeholder="Enter your query here…"
-                  value={input_text}
-                  onChange={onChange}
-                  onKeyDown={searchByEnter}
-                  style={inputstyle}
-                ></textarea>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                {searchState ? (
-                  <button className="btn btn-danger search-btn generaging-btn">
-                    Generating Result
-                  </button>
-                ) : (
-                  <>
-                    {/* <button
+                <div className="search-bar-group">
+                  <input
+                    className="form-control  search-input"
+                    rows="5"
+                    name="input_text"
+                    placeholder="Enter your query here…"
+                    value={input_text}
+                    onChange={onChange}
+                    onKeyDown={searchByEnter}
+                    style={inputstyle}
+                  ></input>
+                  <i className="fas fa-search search-icon" />
+
+                  {searchState ? (
+                    <button className="btn btn-danger search-btn generaging-btn">
+                      Generating Result
+                    </button>
+                  ) : (
+                    <>
+                      {/* <button
                 onClick={searchWithChatsonic}
                 className="btn btn-primary search-btn"
               >
                 Search To Chatsonic
               </button> */}
 
-                    <button
-                      onClick={searchWithOpenai}
-                      className="btn btn-success"
-                    >
-                      Search
-                    </button>
-                  </>
-                )}
-                {/* {renderReSearchButton()} */}
+                      <button
+                        onClick={searchWithOpenai}
+                        className="btn btn-success home-search-btn"
+                      >
+                        Search
+                      </button>
+                    </>
+                  )}
+                  {/* {renderReSearchButton()} */}
+                </div>
               </div>
             </div>
             <div className="row footer">
