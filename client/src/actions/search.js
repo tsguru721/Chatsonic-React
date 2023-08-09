@@ -310,9 +310,10 @@ export const askToOpenai =
         // promptList.map((value, index) => {
         //   promptsInSearchEvent += ' ' + value;
         // });
-        searchKeywardWithPrompts =
-          // 'Write a succinct and factual answer for legal professionals with the goal of providing relevant five precedents and providing five reference to the source of the information' +
-          promptsInSearchEvent + searchQueriyHistory + ' ' + inputValue;
+        searchKeywardWithPrompts = searchQueriyHistory + ' ' + inputValue;
+        // searchKeywardWithPrompts =
+        //   // 'Write a succinct and factual answer for legal professionals with the goal of providing relevant five precedents and providing five reference to the source of the information' +
+        //   promptsInSearchEvent + searchQueriyHistory + ' ' + inputValue;
         dispatch({
           type: SEARCH_NOW,
           payload: inputValue
