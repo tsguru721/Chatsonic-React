@@ -149,7 +149,10 @@ const Home = ({
               style={inputstyle}
             ></input>
 
-            <i className="fas fa-search search-icon" />
+            <i
+              className="fas fa-search search-icon"
+              onClick={searchWithOpenai}
+            />
             {/* <input
               type="text"
               className="form-control sesarch-input"

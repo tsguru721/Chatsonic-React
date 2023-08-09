@@ -108,11 +108,11 @@ const SearchResult = ({
   return (
     <section className="container">
       <div className="row">
-        <div className="col-md-2 search-history-list">
+        <div className="col-md-2 col-sm-12 search-history-list">
           <div className="container search-result-history-div">
             <div className="row">
               <div className="col-md-12 new-chat-btn-div">
-                <button className="new-chat-btn" onClick={makeNewChat}>
+                <button className="btn new-chat-btn" onClick={makeNewChat}>
                   <i className="fas fa-plus new-chat-icon" />
                   New Chat
                 </button>
@@ -123,7 +123,7 @@ const SearchResult = ({
                 {searchHistory.map((index, key) => (
                   <div key={key}>
                     <div
-                      className="btn btn-success search-History-Item"
+                      className="btn search-History-Item"
                       onClick={() => exchangeHistory(key)}
                     >
                       <svg
@@ -148,7 +148,7 @@ const SearchResult = ({
             </div>
           </div>
         </div>
-        <div className="col-md-10">
+        <div className="col-md-10 col-sm-12">
           <div className="container result-search-board">
             {searchResults.map((index, key) => (
               <div key={key}>
@@ -184,7 +184,10 @@ const SearchResult = ({
                     onKeyDown={searchByEnter}
                     style={inputstyle}
                   ></input>
-                  <i className="fas fa-search search-icon" />
+                  <i
+                    className="fas fa-search search-icon"
+                    onClick={searchWithOpenai}
+                  />
 
                   {searchState ? (
                     <button className="btn btn-danger search-btn generaging-btn">

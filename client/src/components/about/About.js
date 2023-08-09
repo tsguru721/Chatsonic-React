@@ -22,7 +22,6 @@ const About = ({ auth, subscribe, subscribeFreetrial }) => {
           </div>
         </div>
         <div className="col-md-12 about-guides-field">
-          <p className="about-subject">About US</p>
           <p>
             lawsearch.ai is an AI-powered legal research tool that helps law
             firms harness the power of AI to <b>save time and money</b>.

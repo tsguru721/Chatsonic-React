@@ -48,10 +48,10 @@ const TextEditor = ({ auth, createArticle, getAll }) => {
         editorClassName="editorClassName"
         onEditorStateChange={onEditorStateChange}
       />
-      <textarea
+      {/* <textarea
         disabled
         value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
-      ></textarea>
+      ></textarea> */}
     </div>
   );
 };

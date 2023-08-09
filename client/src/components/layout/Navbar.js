@@ -21,7 +21,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
           <Link to="/home">Home</Link>
         </li>
         <li>
-          <Link to="/about">About US</Link>
+          <Link to="/about">About Us</Link>
         </li>
         <li>
           <Link to="/searchResult">Search Result</Link>
@@ -36,7 +36,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
           <Link to="/articleCreate">Add Article</Link>
         </li>
         <li>
-          <Link to="/contactus">Contact US</Link>
+          <Link to="/contactus">Contact Us</Link>
         </li>
         <li>
           <a onClick={logout} href="#!">

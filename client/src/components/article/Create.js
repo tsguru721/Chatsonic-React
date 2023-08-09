@@ -13,9 +13,13 @@ const Create = ({
 }) => {
   return (
     <section className="container">
-      <div className="articleEditor">
-        <h1>New Article</h1>
-        <TextEditor />
+      <div className="row">
+        <div className="col-md-12">
+          <div className="articleEditor">
+            <h1>New Article</h1>
+            <TextEditor />
+          </div>
+        </div>
       </div>
     </section>
   );
