@@ -109,6 +109,7 @@
     flex-wrap: wrap;
     height: 100vh;
     padding: 20px 10%;
+    margin-top: 150px !important;
   }
   .contactUsBox {
     background: url('./img/aboutUsBackground.png') no-repeat;
@@ -844,6 +845,14 @@
     font-size: 20px;
     top: 40%;
   }
+  .new-chat-icon {
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .chat-item {
+    margin-right: 10px;
+  }
   .search-btn {
     float: left;
     margin-left: 1%;
@@ -1342,11 +1351,19 @@
   font-size: 30px;
   font-weight: bold;
   border-radius: 60px;
-  border-color: transparent;
+
   margin: auto;
   margin-bottom: 20px;
   padding-right: 20px;
   padding-left: 20px;
+  background: linear-gradient(to bottom, rgb(239, 147, 147), red);
+  border: solid 10px rgb(246, 230, 230);
+  background-clip: padding-box;
+  cursor: pointer;
+  outline: none;
+}
+.freetrialHomeBtn:hover {
+  background: linear-gradient(to bottom, red, rgb(239, 147, 147));
 }
 .freetrialHomeBtnDiv {
   display: flex;
@@ -1536,17 +1553,30 @@
 .articleItemSubject {
   text-align: center;
 }
-
+.search-result-history-div {
+  margin-top: 10px;
+}
 .search-history-list {
   background-color: rgb(54, 54, 54);
   color: white;
+  height: 80vh;
+}
+.new-chat-btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .new-chat-btn {
-  width: 100%;
+  width: 90%;
+  background-color: transparent;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 5px;
 }
 .search-History-Item {
   width: 100%;
   background-color: transparent;
+  text-align: left;
 }
 .search-bar-group {
   position: relative;
@@ -1558,5 +1588,5 @@
   margin: 0;
 }
 .follow-up-query-alarm {
-  font-size: 12px;
+  font-size: 14px;
 }

@@ -109,13 +109,11 @@ const SearchResult = ({
     <section className="container">
       <div className="row">
         <div className="col-md-2 search-history-list">
-          <div className="container">
+          <div className="container search-result-history-div">
             <div className="row">
-              <div className="col-md-12">
-                <button
-                  className="btn btn-primary new-chat-btn"
-                  onClick={makeNewChat}
-                >
+              <div className="col-md-12 new-chat-btn-div">
+                <button className="new-chat-btn" onClick={makeNewChat}>
+                  <i className="fas fa-plus new-chat-icon" />
                   New Chat
                 </button>
               </div>
@@ -124,12 +122,26 @@ const SearchResult = ({
               <div className="col-md-12">
                 {searchHistory.map((index, key) => (
                   <div key={key}>
-                    <button
+                    <div
                       className="btn btn-success search-History-Item"
                       onClick={() => exchangeHistory(key)}
                     >
-                      {index.searchQueries[0].slice(0, 20)}
-                    </button>
+                      <svg
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="h-4 w-4 chat-item"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                      {index.searchQueries[0].slice(0, 10)}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -202,23 +214,24 @@ const SearchResult = ({
             <div className="row">
               <div className="col-md-12">
                 <p className="follow-up-query-alarm">
-                  Feel free to ask me follow up questions if you’d like me to
-                  provide more details. If the result isn’t to your
-                  satisfaction, let me know and ask me again.{' '}
+                  Please ask me follow up questions if you’d like more details.
+                  Answer not what you were looking for? Simply search again and
+                  I’ll do my best to produce an an appropriate answer
                 </p>
               </div>
             </div>
-            <div className="row footer">
-              <div className="col-md-12 privacy-footer">
-                <Link to="/privacy">
-                  <b className="termUseP privacy-link">
-                    Privacy Policy & Terms of Use
-                  </b>
-                </Link>
-                <p className="termUseP  copyright">©2023 by lawsearch.ai</p>
-              </div>
-            </div>
           </div>
+        </div>
+      </div>
+
+      <div className="row footer">
+        <div className="col-md-12 privacy-footer">
+          <Link to="/privacy">
+            <b className="termUseP privacy-link">
+              Privacy Policy & Terms of Use
+            </b>
+          </Link>
+          <p className="termUseP  copyright">©2023 by lawsearch.ai</p>
         </div>
       </div>
     </section>

@@ -295,7 +295,7 @@ const Home = ({
           </p>
         </div>
       </div>
-      <div className="row">
+      {/* <div className="row">
         <div className="col-md-4 feed">
           <div className="feed1"></div>
         </div>
@@ -309,7 +309,7 @@ const Home = ({
         <div className="col-md-4 feed">
           <div className="feed3"></div>
         </div>
-      </div>
+      </div> */}
       <div className="row">
         <div className="col-md-12 howItworksRow">
           <img
