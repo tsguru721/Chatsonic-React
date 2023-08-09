@@ -26,7 +26,7 @@ const TextEditor = ({
   };
   const onSubjectChange = (e) => {
     setSubject(e.target.value);
-    console.log('State', subject);
+    // console.log('State', subject);
   };
   const navigate = useNavigate();
   const createNewArticle = () => {

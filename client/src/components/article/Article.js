@@ -28,7 +28,7 @@ const Article = ({
     () => {
       // eslint-disable-next-line
       getArticleById(id);
-      console.log('article', article);
+      // console.log('article', article);
     }, // eslint-disable-next-line
     [id]
   );

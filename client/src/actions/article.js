@@ -9,7 +9,6 @@ export const createArticle = (subject, content) => async (dispatch) => {
     content: content
   });
   if ((res.status = 200)) {
-    console.log('Article create result from backend', res);
     dispatch(setAlert('New Article created', 'success'));
   }
 };
@@ -31,7 +30,6 @@ export const getAll = () => async (dispatch) => {
 export const getArticleById = (userId) => async (dispatch) => {
   try {
     const res = await api.get(`/article/${userId}`);
-    console.log('res', res);
     dispatch({
       type: GET_ARTICLE,
       payload: res.data

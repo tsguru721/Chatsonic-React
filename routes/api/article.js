@@ -61,10 +61,9 @@ router.post('/update', async (req, res) => {
   }
 });
 router.get('/delete/:id', async ({ params: { id } }, res) => {
-  console.log('id from clent', id);
   let doc = await Article.findByIdAndDelete(id, function (err, docs) {
     if (!err) {
-      console.log(docs);
+      // console.log(docs);
       res.status(200);
     } else {
       console.log(err);

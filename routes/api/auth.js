@@ -21,7 +21,6 @@ router.get('/', auth, async (req, res) => {
   try {
     const client = await gauth.getClient();
     const access_token = await client.getAccessToken();
-    console.log(`Access token: `, access_token);
     let token = access_token.token;
     const user = await User.findById(req.user.id).select('-password');
     res.json({ user, token });

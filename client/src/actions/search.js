@@ -41,7 +41,6 @@ export const newChatBox =
   };
 
 export const exchangeCurrentItem = (key) => async (dispatch) => {
-  console.log('Selected key', key);
   dispatch({
     type: EXCHANGE_CURRENT_ITEM,
     payload: key
@@ -232,7 +231,6 @@ export const askToGoogleVertex =
         // promptList.map((value, index) => {
         //   promptsInSearchEvent += ' ' + value;
         // });
-        console.log('search query', searchQueriyHistory);
         searchKeywardWithPrompts =
           // 'Write a succinct and factual answer for legal professionals with the goal of providing relevant five precedents and providing five reference to the source of the information' +
           promptsInSearchEvent + searchQueriyHistory + ' ' + inputValue;
@@ -312,7 +310,6 @@ export const askToOpenai =
         // promptList.map((value, index) => {
         //   promptsInSearchEvent += ' ' + value;
         // });
-        console.log('search query', searchQueriyHistory);
         searchKeywardWithPrompts =
           // 'Write a succinct and factual answer for legal professionals with the goal of providing relevant five precedents and providing five reference to the source of the information' +
           promptsInSearchEvent + searchQueriyHistory + ' ' + inputValue;
