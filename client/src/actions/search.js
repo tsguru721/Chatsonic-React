@@ -324,13 +324,18 @@ export const askToOpenai =
               model: 'gpt-3.5-turbo',
               messages: [
                 {
-                  role: 'user',
+                  role: 'system',
                   content: searchKeywardWithPrompts
                 },
                 {
-                  role: 'system',
+                  role: 'user',
                   content:
-                    'Please provide the searcher with examples of legal cases that are similar to theirs or have been used as precedent for similar cases. Only provide examples of cases that are available on publicly available databases. Provide links to these cases where possible. Please present in bullet point format (a bullet point per case).'
+                    'Content should be for attorneys and law experts. These attorneys are looking to find similar cases or precedents to legal predicaments so that they can get an initial view of relevant cases that could help them serve their client in their lawsuit.'
+                },
+                {
+                  role: 'user',
+                  content:
+                    'Please respond with full annd factual case names and summaries of the factual cases. Do not present hypothetical cases. Long responses please. Please remain neutral with regards to opinion. Do not use hypothetical answers. Long response.'
                 }
               ]
             },
