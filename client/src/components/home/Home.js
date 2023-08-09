@@ -150,7 +150,7 @@ const Home = ({
             ></input>
 
             <i
-              className="fas fa-search search-icon"
+              className="fas fa-search home-search-icon"
               onClick={searchWithOpenai}
             />
             {/* <input
@@ -166,7 +166,7 @@ const Home = ({
 
             {searchState ? (
               <button className="btn btn-danger search-btn generaging-btn">
-                Generating Result
+                Searching
               </button>
             ) : (
               <>

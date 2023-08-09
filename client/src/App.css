@@ -1207,6 +1207,12 @@
     position: absolute;
     left: 62%;
   }
+  .home-search-icon {
+    position: absolute;
+    left: 55%;
+    font-size: 20px;
+    top: 40%;
+  }
 
   .search-history-list {
     background: url('./img/chat-history.png') no-repeat;
