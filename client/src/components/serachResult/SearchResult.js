@@ -95,6 +95,7 @@ const SearchResult = ({
     if (event.key === 'Enter') {
       event.preventDefault();
       askToOpenai(formData, auth.user.email, data.openAIKey, searchQueries);
+      setFormData({ ...formData, input_text: '' });
     }
   };
   const exchangeHistory = (key) => {
