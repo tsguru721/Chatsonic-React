@@ -191,17 +191,10 @@ const SearchResult = ({
 
                   {searchState ? (
                     <button className="btn btn-danger search-btn generaging-btn">
-                      Generating Result
+                      Searching
                     </button>
                   ) : (
                     <>
-                      {/* <button
-                onClick={searchWithChatsonic}
-                className="btn btn-primary search-btn"
-              >
-                Search To Chatsonic
-              </button> */}
-
                       <button
                         onClick={searchWithOpenai}
                         className="btn btn-success home-search-btn"
