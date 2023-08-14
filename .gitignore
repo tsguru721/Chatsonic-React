@@ -8,3 +8,4 @@ client/src/openai.json
 client/.eslintcache
 client/node_modules/
 db/
+.idea/
